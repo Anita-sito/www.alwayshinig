@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dettaglio Linea - Always Shining</title>
+<link rel="icon" type="image/png" href="My Pictures/logo1.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+<div class="nav-logo">
+  <img src="My Pictures/logo1.png" alt="Always Shining Logo">
+</div>
+<div class="nav-links" id="nav-links">
+<a href="index.html#home">Home</a>
+<a href="index.html#linee">Le Linee</a>
+<a href="index.html#offerte">Offerte</a>
+<a href="index.html#ordine">Traccia il tuo Ordine</a>
+</div>
+<button class="hamburger" id="hamburger" aria-label="Apri menu" onclick="toggleMenu()">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+</nav>
+
+<main class="product-detail-container">
+
+<h1 class="product-main-title" id="dyn-title">Caricamento...</h1>
+
+<div class="product-carousel">
+<button class="carousel-arrow left-arrow" onclick="changeImage(-1)">&#10094;</button>
+<div class="carousel-stage">
+<img src="" alt="Immagine Prodotto" id="dyn-img" class="carousel-img">
+</div>
+<button class="carousel-arrow right-arrow" onclick="changeImage(1)">&#10095;</button>
+</div>
+
+<div class="carousel-dots">
+<span class="dot active"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+</div>
+
+<div class="product-info-box">
+<div class="info-row price-row">
+<strong>PREZZO:</strong> <span class="product-price" id="dyn-price">--</span>
+</div>
+
+<div class="info-row">
+<strong>DESCRIZIONE DEL PRODOTTO:</strong>
+<p id="dyn-description">Caricamento della descrizione...</p>
+</div>
+
+<div class="info-row">
+<strong>DETTAGLI DEL PRODOTTO:</strong>
+<ul id="dyn-details">
+</ul>
+</div>
+</div>
+
+<div class="purchase-actions">
+<div class="single-items-buttons">
+<button class="btn-shop-item">Acquista Shampoo</button>
+<button class="btn-shop-item">Acquista Balsamo</button>
+<button class="btn-shop-item">Acquista Maschera</button>
+</div>
+<div class="full-bundle-button">
+<button class="btn-shop-bundle">Acquista Linea Completa</button>
+</div>
+</div>
+
+</main>
+
+<footer class="main-footer">
+<div class="footer-col">
+<h4>Informazioni Utili</h4>
+<a href="mailto:assistenza@alwaysshining.it">@centro assistenza.it</a>
+<a href="#">Chi siamo</a>
+<a href="#">I nostri ingredienti</a>
+</div>
+<div class="footer-col">
+<h4>Resi e Consegne</h4>
+<a href="index.html#ordine">Traccia il tuo ordine</a>
+<a href="#">Politica di reso</a>
+<a href="#">Tempi di consegna</a>
+</div>
+<div class="footer-col">
+<h4>Policy</h4>
+<a href="#">Privacy Policy</a>
+<a href="#">Cookie Policy</a>
+<a href="#">Termini di cancellazione</a>
+</div>
+</footer>
+<div class="footer-bottom">© 2024 Always Shining — Made with ♡ in Italy</div>
+
+<script>
+// Database locale con i dati di tutte le tue 6 linee
+
+const prodottiData = {
+  lisci: {
+    titolo: "Lisci Perfetti",
+    prezzo: "€45,00",
+    descrizione: "La linea con Keratina permette di avere capelli lucenti senza bisogno di piega. Contrasta il crespo e dona un effetto liscio duraturo.",
+    dettagli: ["Effetto seta fino a 72 ore", "Elimina l'umidità e l'effetto crespo", "Nutre la fibra capillare in profondità"],
+    immagini: [
+      "My Pictures/im.azzurro.jpg",
+      "My Pictures/blu1.png",
+      "My Pictures/blu2.png",
+      "My Pictures/blu3.png"
+    ]
+  },
+  biondo: {
+    titolo: "Mantieni il Biondo",
+    prezzo: "€48,00",
+    descrizione: "Trattamento di mantenimento dopo decolorazioni, con pigmenti blu freddi anti-giallo.",
+    dettagli: ["Arricchito con pigmenti freddi professionali", "Ideale per biondi naturali, mechati o decolorati", "Massima idratazione post-trattamento chimico"],
+    immagini: [
+      "My Pictures/im.giallo.jpg",
+      "My Pictures/giallo1.png",
+      "My Pictures/giallo2.png",
+      "My Pictures/giallo3.png"
+    ]
+  },
+  volume: {
+    titolo: "Extra Volume",
+    prezzo: "€42,00",
+    descrizione: "Studiata per volumizzare il capello dalla radice.",
+    dettagli: ["Effetto push-up immediato dalle radici", "Formula leggera che non appesantisce", "Ottimo per l'uso quotidiano"],
+    immagini: [
+      "My Pictures/im.verde.jpg",
+      "My Pictures/verde1.png",
+      "My Pictures/verde2.png",
+      "My Pictures/verde3.png"
+    ]
+  },
+  ricci: {
+    titolo: "Ricci da Urlo",
+    prezzo: "€46,50",
+    descrizione: "La formula è studiata per dare volume, texture e un'estrema definizione ai tuoi ricci.",
+    dettagli: ["Elasticità e definizione potenziata", "Olio di Neem per ricci lucenti", "Resistente all'umidità esterna"],
+    immagini: [
+      "My Pictures/im.rosa.jpg",
+      "My Pictures/rosa1.png",
+      "My Pictures/rosa2.png",
+      "My Pictures/rosa3.png"
+    ]
+  },
+  nutrimento: {
+    titolo: "Nutrimento e Idratazione",
+    prezzo: "€44,00",
+    descrizione: "Ideale per il nutrimento profondo grazie agli oli di cocco e karité.",
+    dettagli: ["Estratti puri di burro di Karité", "Rigenera le punte secche e sfibrate", "Profumazione avvolgente al cocco"],
+    immagini: [
+      "My Pictures/im.arancio.jpg",
+      "My Pictures/arancio1.png",
+      "My Pictures/arancio2.png",
+      "My Pictures/arancio3.png"
+    ]
+  },
+  anticaduta: {
+    titolo: "Trattamento Anticaduta",
+    prezzo: "€52,00",
+    descrizione: "Con elementi stimolanti la circolazione e rafforzamento del bulbo, previene la caduta del capello.",
+    dettagli: ["Rafforza l'ancoraggio del bulbo pilifero", "Stimola la microcircolazione del cuoio capelluto", "Efficacia testata in 6 settimane"],
+    immagini: [
+      "My Pictures/im.rossa.jpg",
+      "My Pictures/rosso1.png",
+      "My Pictures/rosso2.png",
+      "My Pictures/rosso3.png"
+    ]
+  }
+};
+// Logica per leggere quale linea mostrare
+const urlParams = new URLSearchParams(window.location.search);
+const lineaSelezionata = urlParams.get('linea') || 'lisci'; // Di default 'lisci'
+const dati = prodottiData[lineaSelezionata];
+
+// Riempimento dei nodi HTML della pagina
+document.getElementById('dyn-title').innerText = dati.titolo;
+document.getElementById('dyn-price').innerText = dati.prezzo;
+document.getElementById('dyn-description').innerText = dati.descrizione;
+
+// Inserimento dettagli (lista puntata)
+const ulDetails = document.getElementById('dyn-details');
+dati.dettagli.forEach(item => {
+let li = document.createElement('li');
+li.innerText = item;
+ulDetails.appendChild(li);
+});
+
+// Gestione minima dello slider/carosello immagini (4 immagini)
+let currentImgIndex = 0;
+const imgElement = document.getElementById('dyn-img');
+const dots = document.querySelectorAll('.dot');
+
+function updateCarousel() {
+imgElement.src = dati.immagini[currentImgIndex];
+dots.forEach((d, idx) => {
+if(idx === currentImgIndex) d.classList.add('active');
+else d.classList.remove('active');
+});
+}
+updateCarousel();
+function changeImage(direction) {
+currentImgIndex += direction;
+if(currentImgIndex > 3) currentImgIndex = 0;
+if(currentImgIndex < 0) currentImgIndex = 3;
+updateCarousel();
+}
+
+// Hamburger menu
+function toggleMenu() {
+  const navLinks = document.getElementById('nav-links');
+  const hamburger = document.getElementById('hamburger');
+  navLinks.classList.toggle('open');
+  hamburger.classList.toggle('active');
+}
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById('nav-links').classList.remove('open');
+    document.getElementById('hamburger').classList.remove('active');
+  });
+});
+</script>
+</body>
+</html>

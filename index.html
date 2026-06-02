@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Always Shining</title>
+<link rel="icon" type="image/png" href="My Pictures/logo1.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+ 
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-logo">
+    <img src="My Pictures/logo1.png" alt="Always Shining Logo">
+  </div>
+  <div class="nav-links" id="nav-links">
+    <a href="#home">Home</a>
+    <a href="#linee">Le Linee</a>
+    <a href="#offerte">Offerte</a>
+    <a href="#ordine">Traccia il tuo Ordine</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Apri menu" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+ 
+<!-- HERO -->
+<header class="hero-header" id="home">
+  <div class="logo-placeholder">
+    <img src="My Pictures/header.png" alt="Always Shining Header">
+  </div>
+  <h1>Always Shining</h1>
+  <p class="tagline">La cura che i tuoi capelli meritano, ogni giorno</p>
+</header>
+ 
+<!-- LINEE PRODOTTI -->
+<main class="container" id="linee">
+ 
+  <div class="column left-column">
+ 
+    <article class="card blue-card">
+      <div class="card-content">
+        <h3>Lisci Perfetti</h3>
+        <p>La linea con Keratina permette di avere capelli lucenti senza bisogno di piega. Contrasta il crespo e dona un effetto liscio duraturo.</p>
+        <div class="card-tags">
+          <span class="tag">Keratina</span>
+          <span class="tag">Anti-crespo</span>
+          <span class="tag">Lucidante</span>
+        </div>
+        <a href="prodotto.html" class="card-action-btn">Scopri la linea</a>
+      </div>
+      <div class="card-img-wrap">
+        <img src="My Pictures/im.azzurro.jpg" alt="Prodotti Lisci">
+      </div>
+    </article>
+ 
+    <article class="card yellow-card">
+      <div class="card-content">
+        <h3>Mantieni il Biondo</h3>
+        <p>Trattamento di mantenimento dopo decolorazioni, con pigmenti blu freddi anti-giallo. Preserva la luminosità e neutralizza i toni indesiderati.</p>
+        <div class="card-tags">
+          <span class="tag">Pigmenti blu</span>
+          <span class="tag">Anti-giallo</span>
+          <span class="tag">Post-decolorazione</span>
+        </div>
+        <a href="prodotto.html?linea=biondo" class="card-action-btn">Scopri la linea</a>
+      </div>
+      <div class="card-img-wrap">
+        <img src="My Pictures/im.giallo.jpg" alt="Prodotti Biondo">
+      </div>
+    </article>
+ 
+    <article class="card green-card">
+      <div class="card-content">
+        <h3>Extra Volume</h3>
+        <p>Studiata per volumizzare il capello dalla radice. Adatta per capelli sottili e lavaggi frequenti, dona corpo e movimento senza appesantire.</p>
+        <div class="card-tags">
+          <span class="tag">Volumizzante</span>
+          <span class="tag">Capelli fini</span>
+          <span class="tag">Dalla radice</span>
+        </div>
+        <a href="prodotto.html?linea=volume" class="card-action-btn">Scopri la linea</a>
+      </div>
+      <div class="card-img-wrap">
+        <img src="My Pictures/im.verde.jpg" alt="Prodotti Volume">
+      </div>
+    </article>
+ 
+  </div>
+ 
+  <div class="column right-column">
+ 
+    <article class="card pink-card">
+      <div class="card-content">
+        <h3>Ricci da Urlo</h3>
+        <p>La formula è studiata per dare volume, texture e un'estrema definizione ai tuoi ricci. Ogni boccolo vivo e privo di effetto crespo, tutto il giorno.</p>
+        <div class="card-tags">
+          <span class="tag">Definizione</span>
+          <span class="tag">Anti-crespo</span>
+          <span class="tag">Volume</span>
+        </div>
+        <a href="prodotto.html?linea=ricci" class="card-action-btn">Scopri la linea</a>
+      </div>
+      <div class="card-img-wrap">
+        <img src="My Pictures/im.rosa.jpg" alt="Prodotti Ricci">
+      </div>
+    </article>
+ 
+    <article class="card orange-card">
+      <div class="card-content">
+        <h3>Nutrimento e Idratazione</h3>
+        <p>Ideale per il nutrimento profondo grazie agli oli di cocco e karité. Permette un'idratazione intensa, restituendo morbidezza e vitalità.</p>
+        <div class="card-tags">
+          <span class="tag">Olio di cocco</span>
+          <span class="tag">Karité</span>
+          <span class="tag">Idratazione profonda</span>
+        </div>
+        <a href="prodotto.html?linea=nutrimento" class="card-action-btn">Scopri la linea</a>
+      </div>
+      <div class="card-img-wrap">
+        <img src="My Pictures/im.arancio.jpg" alt="Prodotti Nutrimento">
+      </div>
+    </article>
+ 
+    <article class="card red-card">
+      <div class="card-content">
+        <h3>Trattamento Anticaduta</h3>
+        <p>Con elementi stimolanti la circolazione e rafforzamento del bulbo, previene la caduta del capello. Formulazione dermatologicamente testata.</p>
+        <div class="card-tags">
+          <span class="tag">Rinforzo bulbo</span>
+          <span class="tag">Anticaduta</span>
+          <span class="tag">Circolazione</span>
+        </div>
+            <a href="prodotto.html?linea=anticaduta" class="card-action-btn">Scopri la linea</a>
+      </div>
+      <div class="card-img-wrap">
+        <img src="My Pictures/im.rossa.jpg" alt="Prodotti Anticaduta">
+      </div>
+    </article>
+ 
+  </div>
+ 
+</main>
+ 
+<!-- OFFERTE -->
+<section class="offers-section" id="offerte">
+  <h2>Offerte Speciali ✨</h2>
+  <p class="section-sub">Promozioni esclusive sui kit linea e abbonamenti mensili</p>
+  <div class="offers-grid">
+    <div class="offer-card">
+      <div class="offer-icon">💎</div>
+      <h3>Kit Linea Completa</h3>
+      <p>Acquista tutti i prodotti di una linea e ricevi il trattamento intensivo in omaggio.</p>
+      <span class="offer-badge">–20% SCONTO</span>
+    </div>
+    <div class="offer-card">
+      <div class="offer-icon">🔄</div>
+      <h3>Abbonamento Mensile</h3>
+      <p>Ricevi ogni mese i tuoi prodotti preferiti direttamente a casa, senza pensieri.</p>
+      <span class="offer-badge">–15% SCONTO</span>
+    </div>
+    <div class="offer-card">
+      <div class="offer-icon">🌸</div>
+      <h3>Discovery Set</h3>
+      <p>Prova la tua linea ideale con un set di formati da viaggio a prezzo speciale.</p>
+      <span class="offer-badge">–30% SCONTO</span>
+    </div>
+  </div>
+</section>
+ 
+<!-- TRACCIA ORDINE -->
+<section class="track-section" id="ordine">
+  <h2>Traccia il tuo Ordine</h2>
+  <p>Inserisci il numero d'ordine per monitorare la tua spedizione in tempo reale</p>
+  <div class="track-form">
+    <input class="track-input" type="text" placeholder="es. AS-20240001" />
+    <button class="track-btn">Traccia Ordine →</button>
+  </div>
+  <div class="track-steps">
+    <div class="track-step">
+      <div class="step-dot">📦</div>
+      <span class="step-label">Ordine ricevuto</span>
+    </div>
+    <div class="track-step">
+      <div class="step-dot">🏭</div>
+      <span class="step-label">In preparazione</span>
+    </div>
+    <div class="track-step">
+      <div class="step-dot">🚚</div>
+      <span class="step-label">Spedito</span>
+    </div>
+    <div class="track-step">
+      <div class="step-dot">🏠</div>
+      <span class="step-label">Consegnato</span>
+    </div>
+  </div>
+</section>
+ 
+<!-- FOOTER -->
+<footer class="main-footer">
+  <div class="footer-col">
+    <h4>Informazioni Utili</h4>
+    <a href="mailto:assistenza@alwaysshining.it">@centro assistenza.it</a>
+    <a href="#">Chi siamo</a>
+    <a href="#">I nostri ingredienti</a>
+  </div>
+  <div class="footer-col">
+    <h4>Resi e Consegne</h4>
+    <a href="#ordine">Traccia il tuo ordine</a>
+    <a href="#">Politica di reso</a>
+    <a href="#">Tempi di consegna</a>
+  </div>
+  <div class="footer-col">
+    <h4>Policy</h4>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Cookie Policy</a>
+    <a href="#">Termini di cancellazione</a>
+  </div>
+</footer>
+<div class="footer-bottom">© 2024 Always Shining — Made with ♡ in Italy</div>
+ 
+<script>
+function toggleMenu() {
+  const navLinks = document.getElementById('nav-links');
+  const hamburger = document.getElementById('hamburger');
+  navLinks.classList.toggle('open');
+  hamburger.classList.toggle('active');
+}
+// Chiudi menu al click su un link
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById('nav-links').classList.remove('open');
+    document.getElementById('hamburger').classList.remove('active');
+  });
+});
+</script>
+</body>
+</html>
+ 
